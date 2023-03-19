@@ -24,11 +24,19 @@ import { Spinner } from '@chakra-ui/react';
 import { app, firestore } from '../firebase';
 import { doc, getDoc } from 'firebase/firestore';
 import { Web3Storage } from 'web3.storage';
+import { useDisconnect } from 'wagmi';
 
 const index = () => {
   const [sdoc, setSdoc] = useState('');
   const [loading, setLoading] = useState(false);
   const account = useAccount();
+  const { disconnect } = useDisconnect();
+
+  console.log(account.address);
+
+  useEffect(() => {
+    disconnect();
+  }, []);
 
   const [docData, setDocData] = useState(null);
 
