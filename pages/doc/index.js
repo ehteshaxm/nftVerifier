@@ -75,7 +75,7 @@ const index = () => {
     });
   }
 
-  // const aadhaarData = {
+  // const docData = {
   //   country: 'India',
   //   date_of_birth: '2001-08-13',
   //   district: 'Mumbai',
@@ -99,7 +99,7 @@ const index = () => {
   //   xml_base64: 'UEsDBBQACQAIAEFdclYAAAAAAAAAAAAAAAAjAAAAb2ZmbGluZ',
   // };
 
-  // const licenseData = {
+  // const docData = {
   //   document_type: 'DRIVING_LICENSE',
   //   document_id: 'MH0320190027191',
   //   name: 'MOHAMMED SAIF SHAIKH',
@@ -189,14 +189,14 @@ const index = () => {
             <Image
               objectFit='cover'
               maxW={{ base: '100%', sm: '200px' }}
-              src={`data:image/png;base64,${aadhaarData.photo_base64}`}
+              src={`data:image/png;base64,${docData.photo_base64}`}
               alt='Caffe Latte'
             />
 
             <Stack>
               <CardBody>
                 <div className='flex items-center justify-between'>
-                  <Heading size='lg'>{aadhaarData.name}</Heading>
+                  <Heading size='lg'>{docData.name}</Heading>
                   <Image
                     objectFit='cover'
                     maxW={'50px'}
@@ -206,15 +206,15 @@ const index = () => {
                 </div>
 
                 {/* <Text pt='3'>
-                <span className='font-bold'>Gender:</span> {aadhaarData.gender}
+                <span className='font-bold'>Gender:</span> {docData.gender}
               </Text>
               <Text pt='2'>
                 <span className='font-bold'>D.O.B:</span>{' '}
-                {aadhaarData.date_of_birth}
+                {docData.date_of_birth}
               </Text>
               <Text pt='2'>
                 <span className='font-bold'>Address:</span>{' '}
-                {`${aadhaarData.house}, ${aadhaarData.street}, ${aadhaarData.landmark}, ${aadhaarData.locality}, ${aadhaarData.district}, ${aadhaarData.pincode}, ${aadhaarData.state}`}
+                {`${docData.house}, ${docData.street}, ${docData.landmark}, ${docData.locality}, ${docData.district}, ${docData.pincode}, ${docData.state}`}
               </Text> */}
                 {/* <Heading size='md' pt='5' textAlign='center'>
                 {aadhaar}
@@ -236,14 +236,14 @@ const index = () => {
             <Image
               objectFit='cover'
               maxW={{ base: '100%', sm: '200px' }}
-              src={`data:image/png;base64,${licenseData.photo_base64}`}
+              src={`data:image/png;base64,${docData.photo_base64}`}
               alt='Caffe Latte'
             />
 
             <Stack>
               <CardBody>
                 <div className='flex items-center justify-between'>
-                  <Heading size='lg'>{licenseData.name}</Heading>
+                  <Heading size='lg'>{docData.name}</Heading>
                   <div className='rounded-full m-1 mb-5 w-24'>
                     <Image src='/license.png' />
                   </div>
@@ -251,7 +251,7 @@ const index = () => {
 
                 <Text pt='3'>
                   <span className='font-bold'>Vehicles:</span>{' '}
-                  {licenseData.vehicle_class_details
+                  {docData.vehicle_class_details
                     .map((item) => item.category)
                     .map((item) => (
                       <Text display='inline' mr='1'>
@@ -261,11 +261,11 @@ const index = () => {
                 </Text>
                 {/* <Text pt='2'>
                   <span className='font-bold'>D.O.B:</span>{' '}
-                  {licenseData.date_of_birth}
+                  {docData.date_of_birth}
                 </Text>
                 <Text pt='2'>
                   <span className='font-bold'>Address:</span>{' '}
-                  {licenseData.address}
+                  {docData.address}
                 </Text> */}
               </CardBody>
             </Stack>
