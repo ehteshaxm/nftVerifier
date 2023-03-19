@@ -141,7 +141,13 @@ const index = () => {
   // };
 
   return (
-    <div className='min-h-screen bg-slate-50 flex justify-center items-center flex-col'>
+    <div className='min-h-screen bg-slate-50 flex justify-center items-center flex-col relative'>
+      {account.address !== undefined && (
+        <div className='absolute -top-48 w-full h-80 filter blur-3xl bg-gradient-to-r from-lime-400 to-lime-500 animate-pulse'></div>
+      )}
+      {account.address === undefined && (
+        <div className='absolute -top-48 w-full h-80 filter blur-3xl bg-gradient-to-r from-red-500 to-orange-500 animate-pulse'></div>
+      )}
       <h1 className='text-9xl font-black text-black block mb-8'>🖼️ docNFT</h1>
       <div className='max-w-md mb-10 text-center mb-5'>
         <span className='bg-teal-200 text-2xl rounded-full p-2 px-5 flex items-center justify-between'>
